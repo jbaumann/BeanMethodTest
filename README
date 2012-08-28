@@ -1,0 +1,15 @@
+This project contains code I wrote quite some time ago to get rid of the endless discussions about 
+coverage including bean setters and getters in the measurements.
+The simplest way to do this is by calling getter and setter, the setter with an arbitrary value of 
+the type expected. 
+Since this does not work in all cases, the setter e.g., having additional validation
+code, properties can be excluded by name. In a second mode, only those properties given explicitly
+are tested.
+Here is an example:
+
+        bmth = new BeanMethodTestHelper(oUT);
+        bmth.excludeProperty("nothing");
+        bmth.executeBeanMethods();
+
+
+Enjoy it, Joachim
